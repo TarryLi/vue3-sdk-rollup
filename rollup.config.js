@@ -9,6 +9,8 @@ import replace from "@rollup/plugin-replace";
 import postcssUrl from "postcss-url";
 import cssnano from "cssnano";
 import postcssImport from "postcss-import";
+import image from "@rollup/plugin-image";
+import { visualizer } from "rollup-plugin-visualizer";
 
 import livereload from "rollup-plugin-livereload";
 import serve from "rollup-plugin-serve";
@@ -37,6 +39,7 @@ const plugins = [
   typescript({
     check: false,
   }),
+  image(),
   commonjs(),
   vue({
     css: false,
@@ -67,6 +70,11 @@ const plugins = [
       ".vue",
     ],
   }),
+  // 打包体积分析
+  // visualizer({
+  //   filename: "visualizer.html",
+  //   gzipSize: true,
+  // }),
 ];
 
 if (process.env.NODE_ENV === "development") {
