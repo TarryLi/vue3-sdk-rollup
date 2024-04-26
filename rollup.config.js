@@ -13,8 +13,6 @@ import postcssImport from "postcss-import";
 import livereload from "rollup-plugin-livereload";
 import serve from "rollup-plugin-serve";
 
-const extensions = [".js", ".ts", ".vue"];
-
 const plugins = [
   alias({
     entries: [
@@ -32,7 +30,10 @@ const plugins = [
     preventAssignment: true,
     "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
   }),
-  resolve({ extensions, browser: true }),
+  resolve({
+    preferBuiltins: false,
+    extensions: [".mjs", ".js", ".json", ".css", ".vue"],
+  }),
   typescript({
     check: false,
   }),

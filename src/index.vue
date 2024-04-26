@@ -8,12 +8,14 @@
   </Teleport>
 </template>
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
+import { onMounted, ref, getCurrentInstance } from "vue";
 import style from "./index.module.scss";
 
 const open = ref(false);
 
 onMounted(() => {
+  const self = getCurrentInstance();
 
+  console.log(self)
 });
 </script>
