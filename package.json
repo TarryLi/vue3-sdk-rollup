@@ -1,0 +1,44 @@
+{
+  "name": "vue-next-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "sideEffects": false,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development rollup -cw",
+    "build": "rollup -c"
+  },
+  "dependencies": {
+    "vue": "^3.3.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/plugin-transform-runtime": "^7.22.9",
+    "@babel/preset-env": "^7.16.8",
+    "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-node-resolve": "^8.0.1",
+    "@rollup/plugin-replace": "^5.0.5",
+    "@vue-macros/reactivity-transform": "^0.3.23",
+    "@vue/babel-plugin-jsx": "^1.2.2",
+    "@vue/compiler-sfc": "^3.0.0-beta.15",
+    "@vue/tsconfig": "^0.4.0",
+    "autoprefixer": "^10.4.16",
+    "cross-env": "^7.0.2",
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.27",
+    "postcss-import": "^15.1.0",
+    "postcss-px2viewport": "^0.1.3",
+    "postcss-url": "^10.1.3",
+    "rollup": "^2.10.7",
+    "rollup-plugin-livereload": "^1.3.0",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-typescript2": "^0.27.1",
+    "rollup-plugin-vue": "^6.0.0-beta.6",
+    "sass": "^1.69.5",
+    "tslib": "^2.0.0",
+    "typescript": "~5.1.6"
+  }
+}
