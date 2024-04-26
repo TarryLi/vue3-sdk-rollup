@@ -1,5 +1,8 @@
 <template>
   <button @click="open = true" :class="style.btn">Open Modal</button>
+  <div :class="style.img">
+    <img src="./assets/close.png" />
+  </div>
   <Teleport to="body">
     <div v-if="open" :class="style.modal">
       <p>Hello from the modal!</p>
