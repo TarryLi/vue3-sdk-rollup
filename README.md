@@ -1,4 +1,4 @@
-# vue3-rollup-test
+# vue3-rollup-sdk
 
 ## Installation
 ```shell script
