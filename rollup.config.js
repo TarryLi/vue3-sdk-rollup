@@ -10,6 +10,7 @@ import postcssUrl from "postcss-url";
 import cssnano from "cssnano";
 import postcssImport from "postcss-import";
 import image from "@rollup/plugin-image";
+import terser from '@rollup/plugin-terser';
 import { visualizer } from "rollup-plugin-visualizer";
 
 import livereload from "rollup-plugin-livereload";
@@ -70,6 +71,7 @@ const plugins = [
       ".vue",
     ],
   }),
+  terser(),
   // 打包体积分析
   // visualizer({
   //   filename: "visualizer.html",
