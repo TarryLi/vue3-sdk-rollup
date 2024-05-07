@@ -11,7 +11,8 @@ import cssnano from "cssnano";
 import postcssImport from "postcss-import";
 import image from "@rollup/plugin-image";
 import terser from '@rollup/plugin-terser';
-import { visualizer } from "rollup-plugin-visualizer";
+import copyHtml from './copyHtml';
+// import { visualizer } from "rollup-plugin-visualizer";
 
 import livereload from "rollup-plugin-livereload";
 import serve from "rollup-plugin-serve";
@@ -71,6 +72,7 @@ const plugins = [
       ".vue",
     ],
   }),
+  copyHtml(),
   // 打包体积分析
   // visualizer({
   //   filename: "visualizer.html",
