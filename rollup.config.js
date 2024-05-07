@@ -71,13 +71,16 @@ const plugins = [
       ".vue",
     ],
   }),
-  terser(),
   // 打包体积分析
   // visualizer({
   //   filename: "visualizer.html",
   //   gzipSize: true,
   // }),
 ];
+
+if (process.env.NODE_ENV === "production") {
+  plugins.push(terser());
+}
 
 if (process.env.NODE_ENV === "development") {
   plugins.push(livereload());
